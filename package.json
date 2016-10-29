@@ -39,6 +39,8 @@
   },
   "homepage": "https://github.com/Granze/react-starterify",
   "dependencies": {
+    "bootstrap": "^3.3.7",
+    "bulma": "^0.2.3",
     "history": "^2.0.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",

@@ -1,18 +1,27 @@
 import React from 'react';
 import { Link } from 'react-router';
+import HubGrid from './hubGrid.jsx'
 
-const App = ({ children }) => (
-  <div>
-    <header>
-      <h1>Aktashif</h1>
-      <Link to="/about">About</Link>
-      <Link to="/hubs">Hubs</Link>
-    </header>
-    <section>
-      {children || 'Welcome to Aktashif'}
-    </section>
-  </div>
-);
+const App = React.createClass({
+
+  render: function() {
+    const style = {
+      "maxHeight": screen.height
+    }
+
+    return (
+      <div style={style}>
+        <header>
+            <Link to="/" className="persistent-header">
+              <h1>Aktashif | أكتشف</h1>
+            </Link>
+        </header>
+        <HubGrid />
+      </div>
+    )
+  }
+})
+
 
 App.propTypes = { children: React.PropTypes.object };
 

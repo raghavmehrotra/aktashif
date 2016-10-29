@@ -3,16 +3,14 @@ import { render } from 'react-dom';
 import { Router, Route, hashHistory } from 'react-router';
 import App from './components/App';
 import About from './components/About';
-import Hubs from './components/Hubs.jsx'
+import Hub from './components/Hub.jsx'
 
 window.React = React;
 
 render(
   (<Router history={hashHistory}>
-    <Route path="/" component={App}>
-      <Route path="/about" component={About} />
-      <Route path="/hubs" component={Hubs} />
-    </Route>
+    <Route path="/" component={App}/>
+    <Route path="/:name" component={Hub}></Route>
   </Router>), document.getElementById('content')
 );
 
