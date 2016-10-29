@@ -11,7 +11,7 @@ body {
 
 header {
   color: #fff;
-  background: #0066bb url(../images/reactjs.png) no-repeat right 10px;
+  background: #94c2ab;
   background-size: contain;
   h1 {
     display: inline-block;
@@ -24,13 +24,30 @@ header {
     color: #fff;
     text-decoration: none;
     border-radius: 3px;
-    &.active,
-    &:hover {
-      background-color: #0085F3;
-    }
   }
 }
 
 section {
  padding: 20px;
+}
+
+.persistent-header {
+  margin: auto;
+}
+
+.persistent-header-text {
+  text-align: center;
+  width: 50%;
+}
+
+.hub-grid {
+  max-width: 1280px;
+  width: auto;
+  cursor: pointer;
+  // display: inline-block;
+}
+
+.hub-homescreen-image {
+  display: inline-block;
+  overflow: hidden;
 }
