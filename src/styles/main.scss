@@ -37,17 +37,27 @@ section {
 
 .persistent-header-text {
   text-align: center;
-  width: 50%;
+  width: 100%;
 }
 
 .hub-grid {
-  max-width: 1280px;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
   width: auto;
-  cursor: pointer;
-  // display: inline-block;
+}
+
+.hub-homescreen-image-container {
+  display: inline-block;
+  border: 1px solid black;
+  max-width: 50%;
+  max-height: 30%;
+  width: auto;
 }
 
 .hub-homescreen-image {
-  display: inline-block;
-  overflow: hidden;
+  max-width: 100%;
+  cursor: pointer;
+  margin: auto;
+  padding: 5%
 }
