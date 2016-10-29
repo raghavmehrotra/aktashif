@@ -49,7 +49,6 @@ section {
 
 .hub-homescreen-image-container {
   display: inline-block;
-  border: 1px solid black;
   max-width: 50%;
   max-height: 30%;
   width: auto;
@@ -60,4 +59,8 @@ section {
   cursor: pointer;
   margin: auto;
   padding: 5%
+}
+
+.hub-homescreen-image-caption {
+  font-size: 200%;
 }

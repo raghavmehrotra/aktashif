@@ -14,7 +14,7 @@ export default React.createClass({
         <Link to={"/"+name}>
           <img className="hub-homescreen-image" src={source} />
         </Link>
-        <center><p className="hub-homescreen-caption">{caption}</p></center>
+        <center><p className="hub-homescreen-image-caption">{caption}</p></center>
       </div>
     )
   },
