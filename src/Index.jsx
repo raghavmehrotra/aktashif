@@ -3,7 +3,7 @@ import { render } from 'react-dom';
 import { Router, Route, hashHistory } from 'react-router';
 import App from './components/App';
 import About from './components/About';
-import Hub from './components/Hub.jsx'
+import Hub from './components/Hub.jsx';
 
 window.React = React;
 
