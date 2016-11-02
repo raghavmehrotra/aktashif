@@ -1,8 +1,8 @@
 import React from 'react';
 import { render } from 'react-dom';
 import { Router, Route, hashHistory } from 'react-router';
-import App from './components/App';
-import About from './components/About';
+import App from './components/App.jsx';
+import About from './components/About.jsx';
 import Hub from './components/Hub.jsx';
 
 window.React = React;
