@@ -1,11 +1,11 @@
 {
-  "name": "react-starterify",
-  "version": "2.4.1",
-  "description": "React JS application skeleton using Browserify and other awesome tools",
+  "name": "aktashif",
+  "version": "1.0.0",
+  "description": "A mobile website for readers in the Middle East and North Africa",
   "main": "app.js",
   "repository": {
     "type": "git",
-    "url": "https://github.com/Granze/react-starterify"
+    "url": "https://github.com/raghavmehrotra/aktashif"
   },
   "keywords": [
     "gulp",
@@ -35,9 +35,9 @@
   "author": "Maurizio Mangione",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/Granze/react-starterify/issues"
+    "url": "https://github.com/raghavmehrotra/aktashif/issues"
   },
-  "homepage": "https://github.com/Granze/react-starterify",
+  "homepage": "https://aktashif.org",
   "dependencies": {
     "bootstrap": "^3.3.7",
     "bulma": "^0.2.3",
