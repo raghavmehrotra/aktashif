@@ -1,12 +1,16 @@
 import React from 'react'
+import {Link} from 'react-router'
 
 const Hub = React.createClass({
 
   render: function() {
+      var linkName = '/' + this.props.params.hubName + '/sample-cluster'
     return (
-      <h1>{this.props.params.name}</h1>
-    )
-  }
+        <div>
+            <h1>{this.props.params.hubName}</h1>
+            <Link to={linkName}>A cluster</Link>
+        </div>
+    )}
 })
 
 export default Hub;
