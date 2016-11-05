@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router';
 import HubGrid from './hubGrid.jsx'
+import Header from './header.jsx'
 
 const App = React.createClass({
 
@@ -11,11 +12,7 @@ const App = React.createClass({
 
     return (
       <div style={style}>
-        <header>
-            <Link to="/" className="persistent-header">
-              <h1>Aktashif | أكتشف</h1>
-            </Link>
-        </header>
+        <Header />
         <HubGrid />
       </div>
     )
