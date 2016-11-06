@@ -4,15 +4,19 @@ import * as data from '../accessAllData.jsx'
 
 export default React.createClass({
 
-  renderBookImage: function(coverImage, title, author) {
-    const source = "src/images/book-images/" + coverImage + ".jpg"
+renderBookImage: function(coverImage, title, author) {
+    const linkName = '/' + this.props.hub + '/' + this.props.cluster + '/' + title.replace(/\s+/g, '')
+    const imageSource = "src/images/book-images/" + coverImage + ".jpg"
+    const bookSource = "src/books/" + coverImage + ".html"
     return (
-      <div key={coverImage} className="book-image-container">
-          <img className="book-image" src={source} />
-        <center>
-            <h2 className="hub-homescreen-image-caption">{title}</h2>
-            <h3>{author}</h3>
-        </center>     
+      <div key={coverImage} className="cluster-landing-book-image-container">
+            <a href={bookSource}>
+                <img className="cluster-landing-book-image" src={imageSource} />
+            </a>
+            <center>
+                <h2 className="cluster-landing-book-title">{title}</h2>
+                <h3 className="cluster-landing-book-author">{author}</h3>
+            </center>
       </div>
     )
   },
@@ -20,7 +24,6 @@ export default React.createClass({
   renderBookGrid: function() {
     const books = data.getBooks()
     return books.map((book) => {
-        console.log(book.cover)
       return this.renderBookImage(book.cover, book.name, book.author)
     })
   },

@@ -23,7 +23,7 @@ export function getHubCaptions() {
 }
 
 export function getBooks() {
-    return [{name:"Pride and Prejudice", author:"Jane Austin", cover:"p"},{name:"Alice in Wonderland", author:"Lewis Caroll", cover:"a"},{name:"Frankenstein", author:"Mary Shelley",cover:"f"},{name:"Sherlock Holmes", author: "Arthur Conan Doyle",cover:"s"}, {name:"Metamorphosis", author: "Franz Kafka", cover:"m"}]
+    return [{name:"Pride and Prejudice", author:"Jane Austen", cover:"p"},{name:"Alice in Wonderland", author:"Lewis Caroll", cover:"a"},{name:"Frankenstein", author:"Mary Shelley",cover:"f"},{name:"Sherlock Holmes", author: "Arthur Conan Doyle",cover:"s"}, {name:"Metamorphosis", author: "Franz Kafka", cover:"m"}]
 }
 
 export function getClusterDescription(clusterName) {
