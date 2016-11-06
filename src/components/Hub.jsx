@@ -7,19 +7,39 @@ const Hub = React.createClass({
   renderHubIcon: function() {
     const source = "src/images/" + this.props.params.hubName + ".png"
     return (
-      <img src={source}/>
+      <img className="hub-banner-icon" src={source}/>
     )
   },
 
-  renderHubDescription: function() {
-    
+  renderHubBanner: function() {
+    const description = data.getHubDescriptions(this.props.params.hubName)
+
+    return (
+      <center>
+        <div className="hub-banner">
+          <div className="hub-banner-icon-container">
+            {this.renderHubIcon()}
+          </div>
+          <div className="hub-banner-description">
+            <p>
+              {description}
+            </p>
+          </div>
+        </div>
+      </center>
+    )
+  },
+
+  renderClusters: function() {
+
   },
 
   render: function() {
+    console.log(this.props)
     return (
       <div>
         <Header />
-        {this.renderHubIcon()}
+        {this.renderHubBanner()}
       </div>
     )
   }
