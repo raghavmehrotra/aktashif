@@ -4,6 +4,12 @@ import * as data from '../accessAllData.jsx'
 
 const Hub = React.createClass({
 
+  getInitalState: function() {
+    return {
+      renderBanner: true
+    }
+  },
+
   renderHubIcon: function() {
     const source = "src/images/" + this.props.params.hubName + ".png"
     return (
@@ -20,6 +26,9 @@ const Hub = React.createClass({
           <div className="hub-banner-icon-container">
             {this.renderHubIcon()}
           </div>
+          <div className="hub-banner-icon-title">
+            <h2> Societies </h2>
+          </div>
           <div className="hub-banner-description">
             <p>
               {description}
@@ -35,7 +44,6 @@ const Hub = React.createClass({
   },
 
   render: function() {
-    console.log(this.props)
     return (
       <div>
         <Header />
