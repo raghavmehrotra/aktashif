@@ -2,8 +2,7 @@ import React from 'react'
 import {Link} from 'react-router'
 import * as data from '../accessAllData.jsx'
 
-const hubNames = ["societies.png", "bte.png", "earthAndSky.png", "health.png", "fiction.png", "greats.png"]
-const captions = ["Societies", "Business, Technology & Economics", "Earth and Sky", "Health and the Mind", "Fiction", "Great Ideas & Great People"]
+
 
 export default React.createClass({
 
