@@ -35,11 +35,12 @@ section {
  padding: 20px;
 }
 
-.persistent-header {
+.persistent-header-text {
+  text-align: center;
   margin: auto;
 }
 
-.persistent-header-text {
+.persistent-header-container {
   text-align: center;
   width: 100%;
 }
@@ -60,23 +61,23 @@ section {
 
 .hub-homescreen-image {
   max-width: 100%;
+  max-height: 100%;
+  min-height: 100%;
   cursor: pointer;
   margin: auto;
-  padding: 5%;
 }
 
 .hub-homescreen-image-caption {
-  font-size: 100%;
+  font-size: 50px;
 }
 
 .header-hub-icon {
-    max-height: 100%;
+    max-height: 75px;
 }
 
 .header-hub-icon-container {
     display: inline-block;
     float: right;
-    max-height: 50px;
 }
 
 .cluster-title {

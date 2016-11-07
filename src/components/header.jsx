@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router'
 
 const Header = React.createClass({
-    
+
 renderHubIcon: function(imageName) {
     const source = "src/images/" + imageName + ".png"
     return (
@@ -14,11 +14,11 @@ render: function() {
     var hubIcon =<div/>
     if (!!this.props.hub) hubIcon = this.renderHubIcon(this.props.hub)
     return (
-      <header>
-            <Link to="/" className="persistent-header">
+      <header className="persistent-header-container">
+            <Link to="/" className="persistent-header-text">
                 <h1>Aktashif | أكتشف</h1>
             </Link>
-            <div className="header-hub-icon-container">{hubIcon}</div>       
+            <div className="header-hub-icon-container">{hubIcon}</div>
       </header>
     )}
 

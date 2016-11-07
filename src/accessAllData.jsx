@@ -1,5 +1,5 @@
 export function getHubNames() {
-  return ["societies", "bte", "earthAndSky", "health", "fiction", "greats"]
+  return ["societies", "bte", "greats", "health", "earthAndSky", "fiction"]
 }
 
 export function getHubDescriptions(hubName) {
@@ -17,7 +17,15 @@ export function getHubDescriptions(hubName) {
 }
 
 export function getHubCaptions() {
-  return ["Societies", "Business, Technology & Economics", "Earth and Sky", "Health and the Mind", "Fiction", "Great Ideas & Great People"]
+  // return ["Societies", "Business, Technology & Economics", "Great Ideas & Great People", "Health and the Mind", "Earth and Sky", "Fiction"]
+  return [
+    "مجتمعات",
+    "الأعمال والتكنولوجيا والاقتصاد",
+    "الأفكار الجيدة والشخصيات العظيمة",
+    "الصحة والنفس",
+    "الأرض والسماء",
+    "الروايات"
+  ]
 }
 
 export function getBooks() {
