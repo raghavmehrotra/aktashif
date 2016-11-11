@@ -7,7 +7,7 @@ import * as data from '../accessAllData.jsx'
 export default React.createClass({
 
   renderHubIcon: function(name, caption) {
-    const source = "src/images/" + name + ".png"
+    const source = "src/images/hub-icons/" + name + ".png"
     return (
       <div key={name} className="hub-homescreen-image-container">
         <Link to={"/"+name}>
