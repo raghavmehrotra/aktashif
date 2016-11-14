@@ -14,5 +14,23 @@
     <!-- build:js -->
     <script src="dist/js/app.js"></script>
     <!-- endbuild -->
+    <script src="https://www.gstatic.com/firebasejs/3.5.3/firebase.js"></script>
+    <script>
+      // Initialize Firebase
+      var config = {
+        apiKey: "AIzaSyC-SPQf0ZOOqy82uzjlf-MrtlsBm3An7K4",
+        authDomain: "aktashif.firebaseapp.com",
+        databaseURL: "https://aktashif.firebaseio.com",
+        storageBucket: "aktashif.appspot.com",
+        messagingSenderId: "284535194669"
+      };
+      firebase.initializeApp(config);
+      var database = firebase.database();
+      // console.log(database);
+      firebase.database().ref("/hubs").once("value").then(function(snapshot) {
+        console.log(snapshot.val())
+      })
+
+    </script>
   </body>
 </html>

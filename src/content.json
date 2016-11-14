@@ -1,0 +1,88 @@
+{
+  "hubs": {
+    "societies": {
+      "caption": "Societies",
+      "clusters": {
+        "Cluster 1": {
+          "books": ["Pride and Prejudice", "Alice in Wonderland"]
+        },
+        "Cluster 2": {
+          "books": ["Pride and Prejudice", "Alice in Wonderland"]
+        },
+        "Cluster 3": {
+          "books": ["Pride and Prejudice", "Alice in Wonderland"]
+        }
+      }
+    },
+    "bte": {
+      "caption": "Business, Technology and Economics",
+      "clusters": {
+        "Cluster 1": {
+          "books": ["Pride and Prejudice", "Alice in Wonderland"]
+        },
+        "Cluster 2": {
+          "books": ["Pride and Prejudice", "Alice in Wonderland"]
+        },
+        "Cluster 3": {
+          "books": ["Pride and Prejudice", "Alice in Wonderland"]
+        }
+      }
+    },
+    "earthAndSky": {
+      "caption": "Earth and Sky",
+      "clusters": {
+        "Cluster 1": {
+          "books": ["Pride and Prejudice", "Alice in Wonderland"]
+        },
+        "Cluster 2": {
+          "books": ["Pride and Prejudice", "Alice in Wonderland"]
+        },
+        "Cluster 3": {
+          "books": ["Pride and Prejudice", "Alice in Wonderland"]
+        }
+      }
+    },
+    "health": {
+      "caption": "Health and the Mind",
+      "clusters": {
+        "Cluster 1": {
+          "books": ["Pride and Prejudice", "Alice in Wonderland"]
+        },
+        "Cluster 2": {
+          "books": ["Pride and Prejudice", "Alice in Wonderland"]
+        },
+        "Cluster 3": {
+          "books": ["Pride and Prejudice", "Alice in Wonderland"]
+        }
+      }
+    },
+    "fiction": {
+      "caption": "Fiction",
+      "clusters": {
+        "Cluster 1": {
+          "books": ["Pride and Prejudice", "Alice in Wonderland"]
+        },
+        "Cluster 2": {
+          "books": ["Pride and Prejudice", "Alice in Wonderland"]
+        },
+        "Cluster 3": {
+          "books": ["Pride and Prejudice", "Alice in Wonderland"]
+        }
+      }
+    },
+    "greats": {
+      "caption": "Great Ideas and Great People",
+      "clusters": {
+        "Cluster 1": {
+          "books": ["Pride and Prejudice", "Alice in Wonderland"]
+        },
+        "Cluster 2": {
+          "books": ["Pride and Prejudice", "Alice in Wonderland"]
+        },
+        "Cluster 3": {
+          "books": ["Pride and Prejudice", "Alice in Wonderland"]
+        }
+      }
+    }
+  }
+}
