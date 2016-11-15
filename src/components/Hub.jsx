@@ -25,6 +25,7 @@ const Hub = React.createClass({
 
         // Load the SDK asynchronously
         (function(d, s, id) {
+          console.log("Hello")
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
@@ -81,6 +82,7 @@ const Hub = React.createClass({
         <Header />
         {this.renderHubBanner()}
         <center><Link to={linkName}>A cluster</Link></center>
+        {this.renderFacebookComments()}
       </div>
     )
 }
