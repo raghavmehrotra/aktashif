@@ -2,6 +2,8 @@ import React from 'react'
 import Header from './header.jsx'
 import * as data from '../accessAllData.jsx'
 import {Link} from 'react-router'
+import {FBComments} from 'facebook-plugins'
+
 
 const Hub = React.createClass({
 
@@ -10,13 +12,33 @@ const Hub = React.createClass({
       renderBanner: true
     }
   },
+  
+  componentDidMount: function() {
+        window.fbAsyncInit = function() {
+            FB.init({
+                appId      : '115517331888071',
+                cookie     : true,  // enable cookies to allow the server to access the session
+                xfbml      : true,  // parse social plugins on this page
+                version    : 'v2.5' // use version 2.1
+            });
+        }.bind(this);
 
-renderHubIcon: function() {
-    const source = "src/images/" + this.props.params.hubName + ".png"
-    return (
-      <img className="hub-banner-icon" src={source}/>
-    )
-  },
+        // Load the SDK asynchronously
+        (function(d, s, id) {
+            var js, fjs = d.getElementsByTagName(s)[0];
+            if (d.getElementById(id)) return;
+            js = d.createElement(s); js.id = id;
+            js.src = "http://connect.facebook.net/en_US/sdk.js";
+            fjs.parentNode.insertBefore(js, fjs);
+        }(document, 'script', 'facebook-jssdk'));
+    },
+
+  renderHubIcon: function() {
+      const source = "src/images/" + this.props.params.hubName + ".png"
+      return (
+        <img className="hub-banner-icon" src={source}/>
+      )
+    },
 
   renderHubBanner: function() {
     const description = data.getHubDescriptions(this.props.params.hubName)
@@ -51,6 +73,7 @@ renderHubIcon: function() {
         <Header />
         {this.renderHubBanner()}
         <Link to={linkName}>A cluster</Link>
+        <center><div className="fb-comments" data-numposts="5"></div></center>
       </div>
     )
 }
