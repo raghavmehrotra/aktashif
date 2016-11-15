@@ -6,7 +6,7 @@ const Cluster = React.createClass({
 
   render: function() {
     return (
-<div w3-include-html="../books/p.html"></div>
+        <div w3-include-html="../books/p.html"></div>
     )}
 })
 
