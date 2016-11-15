@@ -34,7 +34,7 @@ const Hub = React.createClass({
     },
 
   renderHubIcon: function() {
-      const source = "src/images/" + this.props.params.hubName + ".png"
+      const source = "src/images/hub-icons//" + this.props.params.hubName + ".png"
       return (
         <img className="hub-banner-icon" src={source}/>
       )

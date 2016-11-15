@@ -4,7 +4,7 @@ import {Link} from 'react-router'
 const Header = React.createClass({
 
 renderHubIcon: function(imageName) {
-    const source = "src/images/" + imageName + ".png"
+    const source = "src/images/hub-icons/" + imageName + ".png"
     return (
         <Link to={"/"+this.props.hub}> <img className="header-hub-icon" src={source}/> </Link>
     )
