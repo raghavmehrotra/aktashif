@@ -38,11 +38,12 @@ const Hub = React.createClass({
       return (
         <img className="hub-banner-icon" src={source}/>
       )
-    },
+  },
 
   renderHubBanner: function() {
-    const description = data.getHubDescriptions(this.props.params.hubName)
+    // if(this.state!==null && this.state.renderBanner == false) return
 
+    const description = data.getHubDescriptions(this.props.params.hubName)
     return (
       <center>
         <div className="hub-banner">
@@ -66,14 +67,20 @@ const Hub = React.createClass({
 
   },
 
+  renderFacebookComments: function() {
+    return (
+      <center><div className="fb-comments" data-numposts="5"></div></center>
+    )
+  },
+
   render: function() {
     var linkName = '/' + this.props.params.hubName + '/sample-cluster'
+    console.log(this.state)
     return (
       <div>
         <Header />
         {this.renderHubBanner()}
-        <Link to={linkName}>A cluster</Link>
-        <center><div className="fb-comments" data-numposts="5"></div></center>
+        <center><Link to={linkName}>A cluster</Link></center>
       </div>
     )
 }
