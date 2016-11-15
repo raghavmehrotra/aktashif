@@ -8,7 +8,7 @@ export function getFirebaseData() {
   };
   var firebase = new Firebase("https://aktashif.firebaseio.com/hubs/");
   console.log(firebase)
-  firebase.once("value").then(function(snapshot) {
+  firebase.once("value", function(snapshot) {
     console.log("Inside hub connector")
     console.log(snapshot.val())
   })
