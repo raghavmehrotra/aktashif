@@ -27,6 +27,7 @@ export default React.createClass({
   },
 
   render: function() {
+    data.getFirebaseData()
     return (
       <center>
         <div className="hub-grid">
