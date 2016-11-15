@@ -1,3 +1,19 @@
+export function getFirebaseData() {
+  var config = {
+    apiKey: "AIzaSyC-SPQf0ZOOqy82uzjlf-MrtlsBm3An7K4",
+    authDomain: "aktashif.firebaseapp.com",
+    databaseURL: "https://aktashif.firebaseio.com",
+    storageBucket: "aktashif.appspot.com",
+    messagingSenderId: "284535194669"
+  };
+  var firebase = new Firebase("https://aktashif.firebaseio.com/hubs/");
+  console.log(firebase)
+  firebase.once("value", function(snapshot) {
+    console.log("Inside hub connector")
+    console.log(snapshot.val())
+  })
+}
+
 export function getHubNames() {
   return ["societies", "bte", "greats", "health", "earthAndSky", "fiction"]
 }

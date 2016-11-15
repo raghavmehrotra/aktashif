@@ -12,7 +12,7 @@ const Hub = React.createClass({
       renderBanner: true
     }
   },
-  
+
   componentDidMount: function() {
         window.fbAsyncInit = function() {
             FB.init({
@@ -50,7 +50,7 @@ const Hub = React.createClass({
             {this.renderHubIcon()}
           </div>
           <div className="hub-banner-icon-title">
-            <h2> Societies </h2>
+            <h2>{this.props.params.hubName}</h2>
           </div>
           <div className="hub-banner-description">
             <p>
