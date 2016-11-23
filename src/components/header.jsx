@@ -11,12 +11,13 @@ renderHubIcon: function(imageName) {
 },
 
 render: function() {
-    var hubIcon =<div/>
+    var hubIcon = <div/>
     if (!!this.props.hub) hubIcon = this.renderHubIcon(this.props.hub)
     return (
       <header className="persistent-header-container">
+            
             <Link to="/" className="persistent-header-text">
-                <h1>Aktashif | أكتشف</h1>
+                <h1>أكتشف</h1>
             </Link>
             <div className="header-hub-icon-container">{hubIcon}</div>
       </header>

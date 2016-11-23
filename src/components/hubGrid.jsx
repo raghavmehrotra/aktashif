@@ -2,8 +2,6 @@ import React from 'react'
 import {Link} from 'react-router'
 import * as data from '../accessAllData.jsx'
 
-
-
 export default React.createClass({
 
   renderHubIcon: function(name, caption) {

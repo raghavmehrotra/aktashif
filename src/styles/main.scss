@@ -1,5 +1,8 @@
 *, *:before, *:after {
   box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+  font-weight:400; 
+  font-style:normal;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;
@@ -10,42 +13,56 @@ body {
 }
 
 header {
-    color: #fff;
-    background: #94c2ab;
-    background-size: contain;
-    //max-width: auto;
-    //align-content: center;
   h1 {
     display: inline-block;
-    //text-align: center;
     padding: 0 20px;
+    color: #2f2f62;
+    font-size: 50px;
   }
   a {
     display: inline-block;
     margin: 10px;
     padding: 10px;
-
+    
     color: #fff;
     text-decoration: none;
     border-radius: 3px;
   }
 }
 
-section {
- padding: 20px;
+.persistent-header-container {
+  text-align: center;
+  width: 100%;
+  align-self: center;
+  margin: 0 auto;
+  display: inline-block;
+  max-height: 100%
 }
 
 .persistent-header-text {
   text-align: center;
-  margin: auto;
+  max-height: 100%;
 }
 
-.persistent-header-container {
-  text-align: center;
-  width: 100%;
+.header-hub-icon {
+    max-height: 100%;
+}
+
+.header-hub-icon-container {
+    display: inline-block;
+    float: right;
+    max-height: 100%;
+  position: absolute; /*newly added*/
+    right: 5px; /*newly added*/
+    top: 5px;
+}
+
+section {
+ padding: 20px;
 }
 
 .hub-grid {
+  margin-top: 20px;
   max-width: 100%;
   max-height: 100%;
   height: auto;
@@ -54,9 +71,10 @@ section {
 
 .hub-homescreen-image-container {
   display: inline-block;
-  max-width: 50%;
-  max-height: 30%;
+  max-width: 230px;
+  max-height: 230px;
   width: auto;
+  padding: 15px;
 }
 
 .hub-homescreen-image {
@@ -68,17 +86,14 @@ section {
 }
 
 .hub-homescreen-image-caption {
-  font-size: 50px;
+  font-size: 20px;
 }
 
-.header-hub-icon {
-    max-height: 75px;
-}
-
-.header-hub-icon-container {
-    display: inline-block;
-    float: right;
-    max-height: 75px;
+.contact-us {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center
 }
 
 .cluster-title {
@@ -107,7 +122,6 @@ section {
   max-height: 300px;
     max-width: 300px;
     cursor: pointer;
-    border: 15px solid #94c2ab;
     border-radius: 15px;
 }
 
