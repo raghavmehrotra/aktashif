@@ -12,7 +12,7 @@ window.React = React;
 render(
   (<Router history={hashHistory}>
     <Route path="/" component={App}/>
-    <Route path="/:hubName" component={Hub}/> 
+    <Route path="/:hubName" component={Hub}/>
     <Route path="/:hubName/:clusterName" component={Cluster}/>
     <Route path="/:hubName/:clusterName/:bookName" component={Book}/>
   </Router>), document.getElementById('content')
