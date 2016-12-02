@@ -1,6 +1,6 @@
 *, *:before, *:after {
   font-family: 'Cairo', sans-serif;
-  font-weight:0; 
+  font-weight:0;
   font-style:normal;
 }
 body {
@@ -44,6 +44,7 @@ div {
 
 .header-hub-icon {
   max-height: 10%;
+  max-width: 10%;
 }
 
 .header-hub-icon-container {
@@ -86,6 +87,7 @@ section {
 
 .hub-homescreen-image {
 	min-width: 50%;
+  max-width: 50%;
   max-height: 50%;
   min-height: 50%;
   cursor: pointer;
@@ -191,7 +193,7 @@ font-size: 150%;
 
 .book-navigtion-button {
 	background-color: transparent;
-  	
+
 }
 
 input[type=range] {
