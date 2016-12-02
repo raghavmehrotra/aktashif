@@ -2,6 +2,7 @@ import React from 'react'
 import Header from './header.jsx'
 import * as data from '../accessAllData.jsx'
 import {Link} from 'react-router'
+<<<<<<< HEAD
 import FacebookComment from './FacebookComment.jsx'
 import ClusterGrid from './clusterGrid.jsx'
 
@@ -26,7 +27,6 @@ const Hub = React.createClass({
 
         // Load the SDK asynchronously
         (function(d, s, id) {
-          console.log("Hello")
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
@@ -68,12 +68,12 @@ const Hub = React.createClass({
 
   },
 
-  renderFacebookComments: function() {
-    return (
-      <center><div className="fb-comments" data-numposts="5"></div></center>
-    )
-  },
-  
+  // renderFacebookComments: function() {
+  //   return (
+  //     <center><div className="fb-comments" data-numposts="5"></div></center>
+  //   )
+  // },
+
   render: function() {
     var linkName = '/' + this.props.params.hubName + '/sample-cluster'
     var hubName = this.props.params.hubName
@@ -82,7 +82,6 @@ const Hub = React.createClass({
         <Header />
         {this.renderHubBanner()}
         <ClusterGrid hub={hubName} />
-        <FacebookComment />
       </div>
     )
 }
