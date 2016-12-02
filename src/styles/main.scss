@@ -1,8 +1,10 @@
 *, *:before, *:after {
-  box-sizing: border-box;
+  font-family: 'Cairo', sans-serif;
+  font-weight:0; 
+  font-style:normal;
 }
 body {
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: 'Cairo', sans-serif;
   color: #333;
   background-color: #fff;
   margin: 0;
@@ -10,39 +12,61 @@ body {
 }
 
 header {
-    color: #fff;
-    background: #94c2ab;
-    background-size: contain;
-    //max-width: auto;
-    //align-content: center;
   h1 {
     display: inline-block;
-    //text-align: center;
-    padding: 0 20px;
+    color: #2f2f62;
+    font-size: 50px;
+	margin: 0;
+	padding: 0;
   }
   a {
     display: inline-block;
-    margin: 10px;
-    padding: 10px;
-
     color: #fff;
     text-decoration: none;
     border-radius: 3px;
   }
 }
 
-section {
- padding: 20px;
-}
-
-.persistent-header-text {
-  text-align: center;
-  margin: auto;
+div {
+	dir: rtl;
 }
 
 .persistent-header-container {
   text-align: center;
+  display: inline-block;
   width: 100%;
+}
+
+.persistent-header-text {
+  text-align: center;
+  max-height: 100%;
+}
+
+.header-hub-icon {
+  max-height: 10%;
+}
+
+.header-hub-icon-container {
+    display: inline-block;
+    float: right;
+    max-height: 100%;
+  	position: absolute; /*newly added*/
+    right: 5px; /*newly added*/
+    top: 5px;
+}
+
+.header-profile-image-container {
+  display:inline-block;
+  float: left;
+  max-height: 10%;
+}
+
+.header-profile-image {
+  max-height: 10%;
+}
+
+section {
+ padding: 20px;
 }
 
 .hub-grid {
@@ -50,18 +74,18 @@ section {
   max-height: 100%;
   height: auto;
   width: auto;
-  margin-top: 20px;
 }
 
 .hub-homescreen-image-container {
   display: inline-block;
-  max-width: 50%;
-  max-height: 30%;
+  max-width: 40%;
+  max-height: 200px;
   width: auto;
+  padding: 15px;
 }
 
 .hub-homescreen-image {
-  max-width: 50%;
+	min-width: 50%;
   max-height: 50%;
   min-height: 50%;
   cursor: pointer;
@@ -69,17 +93,14 @@ section {
 }
 
 .hub-homescreen-image-caption {
-  font-size: 50px;
+  font-size: 20px;
 }
 
-.header-hub-icon {
-    max-height: 75px;
-}
-
-.header-hub-icon-container {
-    display: inline-block;
-    float: right;
-    max-height: 75px;
+.contact-us {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  text-align: center
 }
 
 .cluster-title {
@@ -108,7 +129,6 @@ section {
   max-height: 300px;
     max-width: 300px;
     cursor: pointer;
-    border: 15px solid #94c2ab;
     border-radius: 15px;
 }
 
@@ -137,4 +157,51 @@ section {
       height: auto;
     }
   }
+}
+
+.profile-welcome {
+ 	align-self: center;
+font-size: 150%;
+  background-color: #D59E2A;
+}
+
+.profile-image-container {
+  display: inline-block;
+  padding-left: 7px;
+  padding-right: 7px;
+}
+
+.profile-image {
+  max-height: 20%;
+}
+
+.profile-image-caption {
+  margin: 0;
+  padding: 0;
+}
+
+.book-page {
+  	margin-left: 10%;
+  	margin-right: 10%;
+  	max-width: 80%;
+  	max-height: 80%;
+    word-wrap: break-word;
+    white-space: pre-wrap;
+}
+
+.book-navigtion-button {
+	background-color: transparent;
+  	
+}
+
+input[type=range] {
+	direction: rtl;
+}
+
+button {
+  display: inline-block;
+  appearance: none;
+  box-shadow: none;
+	border-width: 0px;
+  background: rgba(0,0,0,0);
 }
