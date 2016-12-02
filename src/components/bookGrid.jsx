@@ -6,13 +6,12 @@ export default React.createClass({
 
 renderBookImage: function(coverImage, title, author) {
     const linkName = '/' + this.props.hub + '/' + this.props.cluster + '/' + title.replace(/\s+/g, '')
-    const imageSource = "src/images/book-images/" + coverImage + ".jpg"
-    const bookSource = "src/books/" + coverImage + ".html"
+    const imageSource = "src/images/" + coverImage
     return (
       <div key={coverImage} className="cluster-landing-book-image-container">
-            <a href={bookSource}>
+            <Link to={linkName}>
                 <img className="cluster-landing-book-image" src={imageSource} />
-            </a>
+			</Link>
             <center>
                 <h2 className="cluster-landing-book-title">{title}</h2>
                 <h3 className="cluster-landing-book-author">{author}</h3>
@@ -24,7 +23,7 @@ renderBookImage: function(coverImage, title, author) {
   renderBookGrid: function() {
     const books = data.getBooks()
     return books.map((book) => {
-      return this.renderBookImage(book.cover, book.name, book.author)
+      return this.renderBookImage(book.image, book.name, book.author)
     })
   },
 

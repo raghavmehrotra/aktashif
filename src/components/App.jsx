@@ -4,7 +4,7 @@ import HubGrid from './hubGrid.jsx'
 import Header from './header.jsx'
 
 const App = React.createClass({
-
+  
   render: function() {
     const style = {
       "maxHeight": screen.height
@@ -12,7 +12,8 @@ const App = React.createClass({
 
     return (
       <div style={style}>
-        <Header />
+        <div className = "contact-us">!تواصل معنا</div>
+        <Header user="user" />
         <HubGrid />
       </div>
     )
