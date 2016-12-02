@@ -2,7 +2,7 @@ import React from 'react'
 import Header from './header.jsx'
 import * as data from '../accessAllData.jsx'
 import {Link} from 'react-router'
-import {FBComments} from 'facebook-plugins'
+// import {FBComments} from 'facebook-plugins'
 
 
 const Hub = React.createClass({
@@ -25,7 +25,6 @@ const Hub = React.createClass({
 
         // Load the SDK asynchronously
         (function(d, s, id) {
-          console.log("Hello")
             var js, fjs = d.getElementsByTagName(s)[0];
             if (d.getElementById(id)) return;
             js = d.createElement(s); js.id = id;
@@ -68,11 +67,11 @@ const Hub = React.createClass({
 
   },
 
-  renderFacebookComments: function() {
-    return (
-      <center><div className="fb-comments" data-numposts="5"></div></center>
-    )
-  },
+  // renderFacebookComments: function() {
+  //   return (
+  //     <center><div className="fb-comments" data-numposts="5"></div></center>
+  //   )
+  // },
 
   render: function() {
     var linkName = '/' + this.props.params.hubName + '/sample-cluster'
@@ -82,7 +81,6 @@ const Hub = React.createClass({
         <Header />
         {this.renderHubBanner()}
         <center><Link to={linkName}>A cluster</Link></center>
-        {this.renderFacebookComments()}
       </div>
     )
 }
