@@ -10,41 +10,6 @@ export function getFirebaseReference(path) {
   };
   var firebase = new Firebase("https://aktashif.firebaseio.com/"+path);
   return firebase
-  // firebase.initializeApp(config)
-  // console.log("Inside getFirebaseReference, firebase: ", firebase)
-  // console.log(firebase.database())
-  // firebase.once("value", function(snapshot) {
-  //   console.log("Inside callback function")
-  //   console.log(snapshot.val())
-  // })
-}
-
-export function getHubDescriptions(hubName) {
-  const mapping = {
-    "societies": "This is a description for societies",
-    "bte": "This is a description for bte",
-    "earthAndSky": "This is a description for earth and sky",
-    "health": "This is a description for health",
-    "fiction": "This is a description for fiction",
-    "greats": "This is a description for greats"
-  }
-  // return mapping[hubName]
-  var str = "يكن لعدم الثانية عل, جديداً الخاطفة منشوريا بها تم, إذ جهة الأمم الجنوب. أي أما الحربية المعارك, قد وعلى الحربي، الأولية جعل. بحث إعادة قُدُماً ان, بحث أطراف استولت شموليةً ما. الغزو قبضتهم للسيطرة عدد أم. دون أي بالقصف العالم، للأسطول."
-  return str
-}
-
-export function getHubCaptions() {
-  // return ["Societies", "Business, Technology & Economics", "Great Ideas & Great People", "Health and the Mind", "Earth and Sky", "Fiction"]
-  // firebaseRef = getFirebaseReference()
-
-  return [
-    "مجتمعات",
-    "الأعمال والتكنولوجيا والاقتصاد",
-    "أفكار وأشخاص عظماء",
-    "الصحة والنفس",
-    "الأرض والسماء",
-    "الروايات"
-  ]
 }
 
 export function getClusters(hub) {
