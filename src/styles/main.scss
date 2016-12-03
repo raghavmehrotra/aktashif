@@ -43,7 +43,10 @@ div {
 }
 
 .header-hub-icon {
-  max-height: 10%;
+  height: 50px;
+  position: relative;
+  top: 17px;
+  right: 10px;
 }
 
 .header-hub-icon-container {
@@ -62,7 +65,10 @@ div {
 }
 
 .header-profile-image {
-  max-height: 10%;
+	height: 50px;
+  position: relative;
+  top: 17px;
+  left: 10px;
 }
 
 section {
@@ -86,6 +92,7 @@ section {
 
 .hub-homescreen-image {
 	min-width: 50%;
+max-width: 50%;
   max-height: 50%;
   min-height: 50%;
   cursor: pointer;
@@ -146,12 +153,14 @@ section {
     margin-left: 5%;
     margin-right: 5%;
     font-size: 100%;
+	font-size: 20px;
+	      max-width: 75%;
   }
 
   .hub-banner-icon-container {
 
     .hub-banner-icon {
-      max-width: 40%;
+	  max-width: 30%;
       max-height: 40%;
       width: auto;
       height: auto;
@@ -184,12 +193,21 @@ font-size: 150%;
   	margin-left: 10%;
   	margin-right: 10%;
   	max-width: 80%;
-  	max-height: 80%;
     word-wrap: break-word;
     white-space: pre-wrap;
+	font-size: 20px;
 }
 
-.book-navigtion-button {
+.book-navigation {
+	font-size: 20px;
+}
+
+.book-navigation-text {
+	font-size: 20px;
+	
+}
+
+.book-navigation-button {
 	background-color: transparent;
   	
 }
