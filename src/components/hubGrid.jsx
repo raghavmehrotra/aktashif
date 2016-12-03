@@ -4,6 +4,32 @@ import * as data from '../accessAllData.jsx'
 
 export default React.createClass({
 
+  getInitialState: function() {
+    return {
+      hubNames: [],
+      hubCaptions: []
+    }
+	},
+
+  componentWillMount: function() {
+    var firebaseRef = data.getFirebaseReference("hubs")
+    var names = []
+    var captions = []
+    var that = this
+
+    firebaseRef.once("value", function(snapshot) {
+      var hubData = snapshot.val()
+      for(var hub in hubData) {
+        names.push(hubData[hub].id)
+        captions.push(hubData[hub].caption)
+      }
+      that.setState({
+        hubNames: names,
+        hubCaptions: captions
+      })
+    })
+  },
+
   renderHubIcon: function(name, caption) {
     const source = "src/images/hub-icons/" + name + ".png"
     return (
@@ -17,15 +43,15 @@ export default React.createClass({
   },
 
   renderHubGrid: function() {
-    var hubNames = data.getHubNames()
-    var captions = data.getHubCaptions()
+    var hubNames = this.state.hubNames
+    var captions = this.state.hubCaptions
     return hubNames.map((name, index) => {
       return this.renderHubIcon(name, captions[index])
     })
   },
 
   render: function() {
-    data.getFirebaseData()
+    data.getFirebaseReference()
     return (
       <center>
         <div className="hub-grid">

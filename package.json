@@ -42,6 +42,7 @@
     "bootstrap": "^3.3.7",
     "bulma": "^0.2.3",
     "facebook-plugins": "^1.0.5",
+    "firebase": "^3.6.2",
     "history": "^2.0.0",
     "react": "^15.0.0",
     "react-dom": "^15.0.0",

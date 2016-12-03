@@ -1,4 +1,6 @@
-export function getFirebaseData() {
+// import * as firebase from "firebase";
+
+export function getFirebaseReference(path) {
   var config = {
     apiKey: "AIzaSyC-SPQf0ZOOqy82uzjlf-MrtlsBm3An7K4",
     authDomain: "aktashif.firebaseapp.com",
@@ -6,16 +8,15 @@ export function getFirebaseData() {
     storageBucket: "aktashif.appspot.com",
     messagingSenderId: "284535194669"
   };
-  var firebase = new Firebase("https://aktashif.firebaseio.com/hubs/");
-  console.log(firebase)
-  firebase.once("value", function(snapshot) {
-    console.log("Inside hub connector")
-    console.log(snapshot.val())
-  })
-}
-
-export function getHubNames() {
-  return ["societies", "bte", "greats", "health", "earthAndSky", "fiction"]
+  var firebase = new Firebase("https://aktashif.firebaseio.com/"+path);
+  return firebase
+  // firebase.initializeApp(config)
+  // console.log("Inside getFirebaseReference, firebase: ", firebase)
+  // console.log(firebase.database())
+  // firebase.once("value", function(snapshot) {
+  //   console.log("Inside callback function")
+  //   console.log(snapshot.val())
+  // })
 }
 
 export function getHubDescriptions(hubName) {
@@ -34,6 +35,8 @@ export function getHubDescriptions(hubName) {
 
 export function getHubCaptions() {
   // return ["Societies", "Business, Technology & Economics", "Great Ideas & Great People", "Health and the Mind", "Earth and Sky", "Fiction"]
+  // firebaseRef = getFirebaseReference()
+
   return [
     "مجتمعات",
     "الأعمال والتكنولوجيا والاقتصاد",
