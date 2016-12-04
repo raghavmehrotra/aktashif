@@ -1,5 +1,3 @@
-// import * as firebase from "firebase";
-
 export function getFirebaseReference(path) {
   var config = {
     apiKey: "AIzaSyC-SPQf0ZOOqy82uzjlf-MrtlsBm3An7K4",
