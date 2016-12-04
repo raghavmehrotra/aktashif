@@ -4,17 +4,30 @@ import HubGrid from './hubGrid.jsx'
 import Header from './header.jsx'
 
 const App = React.createClass({
+    
+    getInitialState() {
+		return {
+		  loggedIn: ''
+		};
+	 },
+    
+    getUserId: function(id) {
+        console.log("from app, "+id)
+		  this.setState({loggedIn: id})
+	   },
   
   render: function() {
     const style = {
       "maxHeight": screen.height
     }
+    console.log(this.state.loggedIn)
+		
+		//        <div className = "contact-us">!تواصل معنا</div>
 
     return (
       <div style={style}>
-        <div className = "contact-us">!تواصل معنا</div>
-        <Header user="user" />
-        <HubGrid />
+        <Header onLogin={this.getUserId} />
+				{React.cloneElement(this.props.children, {userId: this.state.loggedIn})}
       </div>
     )
   }
