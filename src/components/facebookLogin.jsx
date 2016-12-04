@@ -6,6 +6,15 @@ const Login = React.createClass({
 
   responseFacebook: function(response) {
       console.log(response);
+
+      var userData = new XMLHttpRequest()
+      userData.onreadystatechange = function() {
+  			if(userData.readyState === 4 && userData.status === 200) {
+  				console.log(userData.responseText)
+  			}
+  		}
+      userData.open("GET", "https://graph.facebook.com/me?access_token="+response["accessToken"], true);
+  		userData.send(null);
       //anything else you want to do(save to localStorage)...
   },
 
