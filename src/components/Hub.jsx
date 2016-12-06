@@ -85,18 +85,11 @@ const Hub = React.createClass({
 
   },
 
-  // renderFacebookComments: function() {
-  //   return (
-  //     <center><div className="fb-comments" data-numposts="5"></div></center>
-  //   )
-  // },
-
   render: function() {
     var linkName = '/' + this.props.params.hubName + '/sample-cluster'
     var hubName = this.props.params.hubName
     return (
       <div>
-        <Header />
         {this.renderHubBanner()}
         <ClusterGrid hub={hubName} />
       </div>

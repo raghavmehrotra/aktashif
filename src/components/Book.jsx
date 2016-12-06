@@ -6,14 +6,25 @@ const Book = React.createClass({
 	
 	getInitialState() {
 		return {
-		  currentPage: 1
+		  currentPage: 1,
+			bookmarks: []
 		};
 	 },
 	
-	componentDidUpdate() {
-	    window.scrollTo(0, 0)
+	componentDidMount() {
+		const firebasePath = "users/"+this.props.userId+"/books/"+this.props.params.bookName.toLowerCase()
+		var firebaseRef= data.getFirebaseReference(firebasePath)
+		var that = this
+		firebaseRef.once("value", function(snapshot) {
+			var bookmarksData = snapshot.val()
+			that.setState({bookmarks: bookmarksData, currentPage: that.state.currentPage})
+		})
 	},
 	
+	componentDidUpdate() {
+		window.scrollTo(0, 0)
+	},
+
 	renderPage: function(pages) {
 		var page = pages[this.state.currentPage-1]
 		return(
@@ -24,6 +35,7 @@ const Book = React.createClass({
 	},
 
 	render: function() {
+		console.log(this.state)
 		var allText
 		//get text from file
 		var rawFile = new XMLHttpRequest()
@@ -40,20 +52,6 @@ const Book = React.createClass({
 		//pagify text
 		const pageSize = 900;
 		var pages = []
-		/*while(allText) {
-			if (allText.length < pageSize) {
-				pages.push(allText);
-				break;
-			} else {
-				for(var i = pageSize; i > 0; i--) {
-					if(allText[i] == " ") {
-						pages.push(allText.substr(0, i));
-						allText = allText.substr(i);
-						break;
-					}
-				}
-			}
-		}*/
 		
 		allText = allText.replace(/\n\s*\n/g, '\n');
 		const nlines = 16;
@@ -81,14 +79,13 @@ const Book = React.createClass({
 			//Now, we have 16 lines.
 			pages.push(allText.substr(0,curIndex));
 			allText = allText.substr(curIndex)
-			console.log(pages[pages.length-1])
 		}
 		
 		const totalPages = pages.length
 		
 		return (
 			<div dir="rtl">
-		    {this.renderBookmarkButton()}
+		  {this.renderBookmarkButton()}
 			{this.renderPage(pages)}
 			<center className="book-navigation">
 				<button onClick={this.prevPage}> &lt; </button>
@@ -107,6 +104,7 @@ const Book = React.createClass({
 					type="select"
 					onChange={this.changePage}
 					label="Bookmarks">
+        <option defaultValue disabled>Bookmarks</option>
 				{this.createSelectItems()}
 				</select>
 			</center>
@@ -121,11 +119,10 @@ const Book = React.createClass({
 	
 	createSelectItems() {
 		let items=[]
-		const bookmarks = data.getUser().books[0].bookmarks
-		for (let i = 0; i <= bookmarks.length; i++) {
-			items.push(<option key={i} value={bookmarks[i]}>Page {bookmarks[i]}</option>)
+		const bookmarks = this.state.bookmarks
+		for (var key in bookmarks) {
+			items.push(<option key={key} value={bookmarks[key]}>Page {bookmarks[key]}</option>)
 		}
-		console.log(items)
 		return items
 	},
 	
@@ -146,24 +143,45 @@ const Book = React.createClass({
 	},
 	
 	renderBookmarkButton: function() {
-		const bookmarks = data.getUser().books[0].bookmarks
 		var imageName = "bookmark.png"
-		if(bookmarks.indexOf(this.state.currentPage) != -1) {
-			imageName = "filled.png"
+		for(var key in this.state.bookmarks) {
+			if (this.state.bookmarks[key] == this.state.currentPage) imageName = "filled.png"
 		}
 		const pathName = "src/images/" + imageName
 		return(
-			<button oncClick={this.bookmark}> <img src={pathName}/> </button>
+			<button onClick={this.bookmark}> <img src={pathName}/> </button>
 		)
 	},
 	
+	bookmarksChanged() {
+		const firebasePath = "users/"+this.props.userId+"/books/"+this.props.params.bookName.toLowerCase()
+		var firebaseRef= data.getFirebaseReference(firebasePath)
+		var that = this
+		firebaseRef.once("value", function(snapshot) {
+			var bookmarksData = snapshot.val()
+			that.setState({bookmarks: bookmarksData, currentPage: that.state.currentPage})
+		})
+	},
+    
+  getBookmarks() {
+		const curPage = this.state.currentPage
+		const firebasePath = "users/"+this.props.userId+"/books/"+this.props.params.bookName.toLowerCase()+'/'+curPage
+		var firebaseRef= data.getFirebaseReference(firebasePath)
+		var that = this
+		firebaseRef.once("value", function(snapshot) {
+			var bookmark = snapshot.val()
+			if(bookmark == null) {
+				firebaseRef.set(curPage)
+			} else {
+				firebaseRef.remove()
+			}
+			that.bookmarksChanged()
+		})
+	},
+	
 	bookmark() {
-		/*if(bookmarks.indexOf(this.state.currentPage) != -1) {
-			//adds bookmark to array
-		} else {
-			//removes bookmark from array
-		}
-		{this.renderBookmarkButton()}*/
+		console.log("bookmark!")
+		this.getBookmarks()
 	}
 
 })

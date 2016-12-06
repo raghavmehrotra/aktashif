@@ -2,7 +2,7 @@ import React from 'react'
 import {Link} from 'react-router'
 import * as data from '../accessAllData.jsx'
 
-export default React.createClass({
+const HubGrid = React.createClass({
 
   getInitialState: function() {
     return {
@@ -61,3 +61,5 @@ export default React.createClass({
     )
   }
 })
+
+export default HubGrid;

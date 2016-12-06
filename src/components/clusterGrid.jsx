@@ -18,7 +18,6 @@ export default React.createClass({
 
   renderClusterGrid: function() {
     var clusters = data.getClusters()
-    console.log(clusters)
     return clusters.map((cluster) => {
       return this.renderClusterIcon(cluster.name, cluster.imageURL)
     })

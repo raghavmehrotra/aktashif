@@ -45,6 +45,7 @@
     "firebase": "^3.6.2",
     "history": "^2.0.0",
     "react": "^15.0.0",
+    "react-datepicker": "^0.37.0",
     "react-dom": "^15.0.0",
     "react-facebook-login-component": "^0.6.0",
     "react-router": "^2.0.0"
