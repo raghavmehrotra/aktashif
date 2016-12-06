@@ -6,7 +6,7 @@ import * as data from '../accessAllData.jsx'
 import {hashHistory} from 'react-router'
 
 const Register = React.createClass({
-    
+
     getInitialState: function() {
       return {
           id: this.props.params.userId,
@@ -17,16 +17,16 @@ const Register = React.createClass({
           topic3: '',
           ambition: '',
           education: ''
-      }  
+      }
     },
-    
+
     handleSubmit: function() {
         console.log(this.props.params)
         var firebaseRef = data.getFirebaseReference("users/"+this.props.params.userId+"/info")
         firebaseRef.set(this.state)
         return false;
     },
-    
+
     handleChange: function(event) {
         const name = event.target.name
         const val = event.target.value
@@ -34,19 +34,19 @@ const Register = React.createClass({
         this.setState(newState)
         console.log(this.state)
     },
-    
+
     render: function() {
         return (
             <center dir='rtl'>
                 <h2>التسجيل</h2>
                 <form onSubmit={this.handleSubmit}>
                     <h3>عني</h3>
-                    ميلادي: 
+                    ميلادي:
                     <DatePicker
                         selected={moment(this.state.birthDate)}
-                        peekNextMonth 
+                        peekNextMonth
                         placeholderText="ميلادي"
-                        showMonthDropdown 
+                        showMonthDropdown
                         showYearDropdown
                         dropdownMode="select" /> <br/>
                     موبايل:
@@ -57,7 +57,7 @@ const Register = React.createClass({
                       <input name="topic3" type="text" value={this.state.topic3} onChange={this.handleChange}/>
                     <h3>طموحي</h3>
                     أريد أن أكون... <input name="ambition" type="text" value={this.state.ambition} onChange={this.handleChange}/> <br/>
-                    درست لحد... 
+                    درست لحد...
                     <select name="education" value={this.state.education} onChange={this.handleChange}>
                       <option value="intermediate">المتوسطة</option>
                       <option value="secondary">الثانوية</option>
@@ -68,7 +68,7 @@ const Register = React.createClass({
                     <input type="submit" value="سجّل"/>
                 </form>
             </center>
-            
+
     )}
 })
 
