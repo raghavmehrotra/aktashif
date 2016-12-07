@@ -24,7 +24,6 @@ export default React.createClass({
   },
 
   render: function() {
-    console.log(this.props)
     return (
       <center>
         <div className="hub-grid">
