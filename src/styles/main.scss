@@ -43,6 +43,10 @@ div {
 }
 
 .header-hub-icon {
+  height: 50px;
+  position: relative;
+  top: 17px;
+  right: 10px;
   max-height: 10%;
   max-width: 10%;
 }
@@ -63,7 +67,10 @@ div {
 }
 
 .header-profile-image {
-  max-height: 10%;
+	height: 50px;
+  position: relative;
+  top: 17px;
+  left: 10px;
 }
 
 section {
@@ -148,12 +155,14 @@ section {
     margin-left: 5%;
     margin-right: 5%;
     font-size: 100%;
+	font-size: 20px;
+	      max-width: 75%;
   }
 
   .hub-banner-icon-container {
 
     .hub-banner-icon {
-      max-width: 40%;
+	  max-width: 30%;
       max-height: 40%;
       width: auto;
       height: auto;
@@ -211,12 +220,21 @@ font-size: 150%;
   	margin-left: 10%;
   	margin-right: 10%;
   	max-width: 80%;
-  	max-height: 80%;
     word-wrap: break-word;
     white-space: pre-wrap;
+	font-size: 20px;
 }
 
-.book-navigtion-button {
+.book-navigation {
+	font-size: 20px;
+}
+
+.book-navigation-text {
+	font-size: 20px;
+
+}
+
+.book-navigation-button {
 	background-color: transparent;
 
 }
@@ -232,13 +250,6 @@ button {
 	border-width: 0px;
   background: rgba(0,0,0,0);
 }
-
-
-
-
-
-
-
 
 .react-datepicker__tether-element-attached-top .react-datepicker__triangle, .react-datepicker__tether-element-attached-bottom .react-datepicker__triangle, .react-datepicker__year-read-view--down-arrow {
   margin-left: -8px;
