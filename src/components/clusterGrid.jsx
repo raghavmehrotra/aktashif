@@ -7,11 +7,11 @@ export default React.createClass({
     const source = "src/images/cluster-images/" + url + ".png"
     const hubName = this.props.hub
     return (
-      <div key={name} className="hub-homescreen-image-container">
+      <div key={name} className="cluster-icon-container">
         <Link to={"/"+hubName+'/'+url}>
-          <img className="hub-homescreen-image" src={source} />
+          <img className="cluster-icon" src={source} />
         </Link>
-        <p className="hub-homescreen-image-caption">{name}</p>
+        <p className="cluster-icon-caption">{name}</p>
       </div>
     )
   },
@@ -26,7 +26,7 @@ export default React.createClass({
   render: function() {
     return (
       <center>
-        <div className="hub-grid">
+        <div className="cluster-grid">
           {this.renderClusterGrid()}
         </div>
       </center>

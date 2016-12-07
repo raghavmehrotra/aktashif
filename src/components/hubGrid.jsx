@@ -37,7 +37,7 @@ const HubGrid = React.createClass({
         <Link to={"/"+name}>
           <img className="hub-homescreen-image" src={source} />
         </Link>
-        <p className="hub-homescreen-image-caption">{caption}</p>
+        <p className="hub-homescreen-image-caption">{caption}</p>    
       </div>
     )
   },

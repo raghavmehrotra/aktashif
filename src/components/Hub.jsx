@@ -68,9 +68,7 @@ const Hub = React.createClass({
           <div className="hub-banner-icon-container">
             {this.renderHubIcon()}
           </div>
-          <div className="hub-banner-icon-title">
-            <h2>{this.state.hubCaption}</h2>
-          </div>
+          <h1>{this.state.hubCaption}</h1>
           <div className="hub-banner-description">
             <p dir='rtl'>
               {description}

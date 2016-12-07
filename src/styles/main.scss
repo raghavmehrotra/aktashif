@@ -73,6 +73,11 @@ div {
   left: 10px;
 }
 
+.profile-books-container {
+  display: flex;
+  justify-content: space-around;
+}
+
 section {
  padding: 20px;
 }
@@ -89,6 +94,9 @@ section {
   max-width: 40%;
   max-height: 200px;
   width: auto;
+  margin-left: 7px;
+  margin-right: 7px;
+  margin-bottom: 100px;
   padding: 15px;
 }
 
@@ -102,7 +110,39 @@ section {
 }
 
 .hub-homescreen-image-caption {
-  font-size: 20px;
+  font-size: 30px;
+}
+
+.cluster-grid {
+  display: flex;
+  justify-content: space-around;
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+  width: auto;
+  margin-top: 10%;
+}
+
+.cluster-icon-container {
+  display: inline-block;
+  // max-height: 200px;
+  // width: auto;
+  // margin-left: 7px;
+  // margin-right: 7px;
+  // margin-bottom: 100px;
+  // padding: 15px;
+}
+
+.cluster-icon {
+  width: auto;
+  height: auto;
+  cursor: pointer;
+  margin: auto;
+  padding: auto;
+}
+
+.cluster-icon-caption {
+  font-size: 30px;
 }
 
 .contact-us {
@@ -155,29 +195,32 @@ section {
     margin-left: 5%;
     margin-right: 5%;
     font-size: 100%;
-	font-size: 20px;
-	      max-width: 75%;
+	  font-size: 50px;
+	  max-width: 75%;
   }
 
   .hub-banner-icon-container {
 
     .hub-banner-icon {
-	  max-width: 30%;
+	    max-width: 30%;
       max-height: 40%;
       width: auto;
       height: auto;
+    }
+
+    .hub-banner-icon-title {
+      font-size: 100%;
     }
   }
 }
 
 .profile-welcome {
  	align-self: center;
-font-size: 150%;
+  font-size: 150%;
   background-color: #D59E2A;
 }
 
 .profile-image-container {
-  display: inline-block;
   padding-left: 7px;
   padding-right: 7px;
 	margin-top: 7px;
@@ -203,17 +246,44 @@ font-size: 150%;
 }
 
 .header-profile-image {
-    margin-top: 15px;
-    margin-left: 15px;
+  margin-top: 15px;
+  margin-left: 15px;
 }
 
 .profile-book-image {
-    max-height: 20%;
+  height: 75%;
+  max-height: 100%;
+  max-width: 100%;
 }
 
-.profile-image-caption {
+.profile-trophy-image {
+  height: 75%;
+  max-height: 100%;
+  max-width: 100%;
+}
+
+.profile-book-caption {
+  font-size: 250%;
+  text-align: center;
   margin: 0;
   padding: 0;
+}
+
+.profile-trophy-caption {
+  margin: 0;
+  padding: 0;
+  font-size: 250%;
+  text-align: center;
+}
+
+.profile-books-title {
+  font-size: 250%;
+  margin-right: 3%;
+}
+
+.profile-trophies-title {
+  font-size: 250%;
+  margin-right: 3%;
 }
 
 .book-page {
@@ -238,6 +308,7 @@ font-size: 150%;
 	background-color: transparent;
 
 }
+
 
 input[type=range] {
 	direction: rtl;

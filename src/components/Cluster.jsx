@@ -6,8 +6,9 @@ import * as data from '../accessAllData.jsx'
 const Cluster = React.createClass({
 
   render: function() {
-      const hubName = this.props.params.hubName
-      const clusterName = this.props.params.clusterName
+    console.log(this.props)
+    const hubName = this.props.params.hubName
+    const clusterName = this.props.params.clusterName
     return (
         <div>
             <h1 className="cluster-title">{this.props.params.clusterName}</h1>

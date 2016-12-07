@@ -4,7 +4,7 @@ import Login from './facebookLogin.jsx'
 import * as data from '../accessAllData.jsx'
 
 const Header = React.createClass({
-	
+
 	getInitialState: function() {
     return {
 			token: -1,
@@ -18,12 +18,12 @@ renderHubIcon: function(imageName) {
         <Link to={"/"+this.props.hub}> <img className="header-hub-icon" src={source}/> </Link>
     )
 },
-	
+
 	getUserId: function(token) {
 		this.setState({token: token, userName: ""})
-    
+
 	},
-	
+
 	getUserName: function() {
     var that = this
 		var userData = new XMLHttpRequest()
@@ -42,7 +42,7 @@ renderHubIcon: function(imageName) {
 render: function() {
     if(this.state.token != -1) this.getUserName()
     var hubIcon = <div/>
-    //if (!!this.props.hub) hubIcon = this.renderHubIcon(this.props.hub)
+    // if (!!this.props.hub) hubIcon = this.renderHubIcon(this.props.hub)
 		const greeting =  'مرحبًا' + ' ' + this.state.userName + '!'
     return (
 			<div>
