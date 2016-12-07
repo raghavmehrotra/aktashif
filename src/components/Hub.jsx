@@ -2,7 +2,6 @@ import React from 'react'
 import Header from './header.jsx'
 import * as data from '../accessAllData.jsx'
 import {Link} from 'react-router'
-<<<<<<< HEAD
 import FacebookComment from './FacebookComment.jsx'
 import ClusterGrid from './clusterGrid.jsx'
 
