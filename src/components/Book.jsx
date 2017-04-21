@@ -12,7 +12,6 @@ const Book = React.createClass({
 	 },
 
 	componentDidMount() {
-		console.log("User id: ", this.props.userId)
 		const firebasePath = "users/"+this.props.userId+"/books/"+this.props.params.bookName.toLowerCase()
 		var firebaseRef= data.getFirebaseReference(firebasePath)
 		var that = this
@@ -36,7 +35,6 @@ const Book = React.createClass({
 	},
 
 	render: function() {
-		console.log(this.state)
 		var allText;
 		//get text from file
 		var rawFile = new XMLHttpRequest()
@@ -165,13 +163,16 @@ const Book = React.createClass({
 	},
 
   getBookmarks() {
+		// Don't let a user bookmark unless they're logged in
+		if(this.props.userId === "") {
+			alert("Please login to access the bookmark feature.");
+			return;
+		}
 		const curPage = this.state.currentPage
 		const firebasePath = "users/"+this.props.userId+"/books/"+this.props.params.bookName.toLowerCase()+'/'+curPage
 		var firebaseRef= data.getFirebaseReference(firebasePath)
 		var that = this
 		firebaseRef.once("value", function(snapshot) {
-			console.log("Inside callback, firebase reference: ", firebaseRef);
-			console.log("Inside callback, current page: ", curPage);
 			var bookmark = snapshot.val()
 			if(bookmark == null) {
 				firebaseRef.set(curPage)

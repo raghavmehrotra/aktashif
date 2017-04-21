@@ -40,6 +40,17 @@ const Profile = React.createClass({
 
   render: function() {
   	console.log(this.props)
+
+    // Need to store book data by itself somewhere - because need number of pages in book
+    // USE CODE BELOW TO GET THE BOOKS THE USER HAS BOOKMARKED AT LEAST ONCE
+    // const firebasePath = "users/"+this.props.userId+"/books/"+this.props.params.bookName.toLowerCase()
+		// var firebaseRef= data.getFirebaseReference(firebasePath)
+		// var that = this
+		// firebaseRef.once("value", function(snapshot) {
+		// 	var bookmarksData = snapshot.val()
+		// 	that.setState({bookmarks: bookmarksData, currentPage: that.state.currentPage})
+		// })
+
   	var books = []
   	for(var i = 0; i < data.getUser().books.length; i++) {
   	  const bookData = data.getBooks().find( (element) => {
@@ -57,7 +68,8 @@ const Profile = React.createClass({
 					<h1 className="profile-books-title">كتبي</h1>
 					<div className="profile-books-container">{this.renderGrid(books, 'progress')}</div>
         </div>
-    )}
+    )
+  }
 })
 
 export default Profile;

@@ -4,25 +4,23 @@ import HubGrid from './hubGrid.jsx'
 import Header from './header.jsx'
 
 const App = React.createClass({
-    
+
     getInitialState() {
 		return {
 		  loggedIn: ''
 		};
 	 },
-    
+
     getUserId: function(id) {
         console.log("from app, "+id)
 		  this.setState({loggedIn: id})
 	   },
-  
+
   render: function() {
     const style = {
       "maxHeight": screen.height
     }
-    console.log(this.state.loggedIn)
-		
-		//        <div className = "contact-us">!تواصل معنا</div>
+    // console.log(this.state.loggedIn)
 
     return (
       <div style={style}>
