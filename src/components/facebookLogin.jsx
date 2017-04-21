@@ -5,7 +5,7 @@ import * as data from '../accessAllData.jsx'
 import {hashHistory} from 'react-router'
 
 const Login = React.createClass({
-	
+
 	getInitialState: function() {
     return {
 			userId: -1
@@ -20,25 +20,23 @@ const Login = React.createClass({
 					const user = JSON.parse(userData.responseText)
 					that.setState({userId: user.id})
 					that.props.onLogin(response["accessToken"])
-          
+
           //check if user exists...
           var firebaseRef = data.getFirebaseReference("users/"+user.id)
           firebaseRef.once("value", function(snapshot) {
               if(snapshot.val() === null) {
                   hashHistory.push("/register/"+user.id)
-                  /*firebaseRef.set({
-                      id: user.id,
-                      name: user.name
-                  })*/
-              } else hashHistory.push("/register/"+user.id)
+              } else {
+								hashHistory.push("/")
+							}
           })
-          
+
   			}
   		}
       userData.open("GET", "https://graph.facebook.com/me?access_token="+response["accessToken"], true);
   		userData.send(null);
   },
-	
+
 	renderLogin: function() {
 		if (this.state.userId != -1) {
 			//get user's profile picture
