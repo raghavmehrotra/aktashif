@@ -3,15 +3,16 @@ import Header from './header.jsx'
 import * as data from '../accessAllData.jsx'
 
 const Book = React.createClass({
-	
+
 	getInitialState() {
 		return {
 		  currentPage: 1,
 			bookmarks: []
 		};
 	 },
-	
+
 	componentDidMount() {
+		console.log("User id: ", this.props.userId)
 		const firebasePath = "users/"+this.props.userId+"/books/"+this.props.params.bookName.toLowerCase()
 		var firebaseRef= data.getFirebaseReference(firebasePath)
 		var that = this
@@ -20,7 +21,7 @@ const Book = React.createClass({
 			that.setState({bookmarks: bookmarksData, currentPage: that.state.currentPage})
 		})
 	},
-	
+
 	componentDidUpdate() {
 		window.scrollTo(0, 0)
 	},
@@ -29,14 +30,14 @@ const Book = React.createClass({
 		var page = pages[this.state.currentPage-1]
 		return(
 			<div dir="rtl" className="book-page">
-			{page}
+				{page}
 			</div>
 		)
 	},
 
 	render: function() {
 		console.log(this.state)
-		var allText
+		var allText;
 		//get text from file
 		var rawFile = new XMLHttpRequest()
 		rawFile.open("GET", "src/books/abc.txt", false);
@@ -52,7 +53,7 @@ const Book = React.createClass({
 		//pagify text
 		const pageSize = 900;
 		var pages = []
-		
+
 		allText = allText.replace(/\n\s*\n/g, '\n');
 		const nlines = 16;
 		const charsPerLine = 100;
@@ -80,16 +81,16 @@ const Book = React.createClass({
 			pages.push(allText.substr(0,curIndex));
 			allText = allText.substr(curIndex)
 		}
-		
+
 		const totalPages = pages.length
-		
+
 		return (
 			<div dir="rtl">
 		  {this.renderBookmarkButton()}
 			{this.renderPage(pages)}
 			<center className="book-navigation">
 				<button onClick={this.prevPage}> &lt; </button>
-				     الصفحة {this.state.currentPage} من {totalPages}     
+				     الصفحة {this.state.currentPage} من {totalPages}
 				<button onClick={()=>this.nextPage(totalPages)}> &gt;</button>
 				<br/>
 				<input
@@ -104,28 +105,28 @@ const Book = React.createClass({
 					type="select"
 					onChange={this.changePage}
 					label="Bookmarks">
-        <option defaultValue disabled>Bookmarks</option>
+        <option defaultValue>Bookmarks</option>
 				{this.createSelectItems()}
 				</select>
 			</center>
 			</div>
 		)},
-	
+
 	changePage(evt){
 		this.setState({
       currentPage: evt.target.value
     })
 	},
-	
+
 	createSelectItems() {
-		let items=[]
+		let items = []
 		const bookmarks = this.state.bookmarks
 		for (var key in bookmarks) {
 			items.push(<option key={key} value={bookmarks[key]}>Page {bookmarks[key]}</option>)
 		}
 		return items
 	},
-	
+
 	prevPage() {
 		var currentPage = this.state.currentPage
 		if(currentPage > 1) {
@@ -133,7 +134,7 @@ const Book = React.createClass({
 			this.setState({currentPage: currentPage})
 		}
 	},
-	
+
 	nextPage(totalPages) {
 		var currentPage = this.state.currentPage
 		if(currentPage < totalPages) {
@@ -141,7 +142,7 @@ const Book = React.createClass({
 			this.setState({currentPage: currentPage})
 		}
 	},
-	
+
 	renderBookmarkButton: function() {
 		var imageName = "bookmark.png"
 		for(var key in this.state.bookmarks) {
@@ -149,10 +150,10 @@ const Book = React.createClass({
 		}
 		const pathName = "src/images/" + imageName
 		return(
-			<button onClick={this.bookmark}> <img src={pathName}/> </button>
+			<button onClick={this.getBookmarks}> <img src={pathName}/> </button>
 		)
 	},
-	
+
 	bookmarksChanged() {
 		const firebasePath = "users/"+this.props.userId+"/books/"+this.props.params.bookName.toLowerCase()
 		var firebaseRef= data.getFirebaseReference(firebasePath)
@@ -162,13 +163,15 @@ const Book = React.createClass({
 			that.setState({bookmarks: bookmarksData, currentPage: that.state.currentPage})
 		})
 	},
-    
+
   getBookmarks() {
 		const curPage = this.state.currentPage
 		const firebasePath = "users/"+this.props.userId+"/books/"+this.props.params.bookName.toLowerCase()+'/'+curPage
 		var firebaseRef= data.getFirebaseReference(firebasePath)
 		var that = this
 		firebaseRef.once("value", function(snapshot) {
+			console.log("Inside callback, firebase reference: ", firebaseRef);
+			console.log("Inside callback, current page: ", curPage);
 			var bookmark = snapshot.val()
 			if(bookmark == null) {
 				firebaseRef.set(curPage)
@@ -178,11 +181,6 @@ const Book = React.createClass({
 			that.bookmarksChanged()
 		})
 	},
-	
-	bookmark() {
-		console.log("bookmark!")
-		this.getBookmarks()
-	}
 
 })
 

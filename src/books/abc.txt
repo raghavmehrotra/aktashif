@@ -4,9 +4,7 @@ by Jane Austen
 
 Chapter 1
 
-It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife.
-
-However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered the rightful property of some one or other of their daughters.
+It is a truth universally acknowledged, that a single man in possession of a good fortune, must be in want of a wife. However little known the feelings or views of such a man may be on his first entering a neighbourhood, this truth is so well fixed in the minds of the surrounding families, that he is considered the rightful property of some one or other of their daughters.
 
 "My dear Mr. Bennet," said his lady to him one day, "have you heard that Netherfield Park is let at last?"
 
@@ -191,7 +189,7 @@ When Jane and Elizabeth were alone, the former, who had been cautious in her pra
 
 "Dear Lizzy!"
 
-"Oh! you are a great deal too apt, you know, to like people in general.  You never see a fault in anybody.  All the world are good and agreeable in your eyes.  I never heard you speak ill of a human being in your life." 
+"Oh! you are a great deal too apt, you know, to like people in general.  You never see a fault in anybody.  All the world are good and agreeable in your eyes.  I never heard you speak ill of a human being in your life."
 
 "I would not wish to be hasty in censuring anyone; but I always speak what I think."
 
@@ -217,7 +215,7 @@ Chapter 5
 
 Within a short walk of Longbourn lived a family with whom the Bennets were particularly intimate.  Sir William Lucas had been formerly in trade in Meryton, where he had made a tolerable fortune, and risen to the honour of knighthood by an address to the king during his mayoralty.  The distinction had perhaps been felt too strongly.  It had given him a disgust to his business, and to his residence in a small market town; and, in quitting them both, he had removed with his family to a house about a mile from Meryton, denominated from that period Lucas Lodge, where he could think with pleasure of his own importance, and, unshackled by business, occupy himself solely in being civil to all the world.  For, though elated by his rank, it did not render him supercilious; on the contrary, he was all attention to everybody.  By nature inoffensive, friendly, and obliging, his presentation at St. James's had made him courteous.
 
-Lady Lucas was a very good kind of woman, not too clever to be a valuable neighbour to Mrs. Bennet.  They had several children.  The eldest of them, a sensible, intelligent young woman, about twenty-seven, was Elizabeth's intimate friend. 
+Lady Lucas was a very good kind of woman, not too clever to be a valuable neighbour to Mrs. Bennet.  They had several children.  The eldest of them, a sensible, intelligent young woman, about twenty-seven, was Elizabeth's intimate friend.
 
 That the Miss Lucases and the Miss Bennets should meet to talk over a ball was absolutely necessary; and the morning after the assembly brought the former to Longbourn to hear and to communicate.
 
@@ -229,7 +227,7 @@ That the Miss Lucases and the Miss Bennets should meet to talk over a ball was a
 
 "Perhaps you mean what I overheard between him and Mr. Robinson; did not I mention it to you?  Mr. Robinson's asking him how he liked our Meryton assemblies, and whether he did not think there were a great many pretty women in the room, and _which_ he thought the prettiest? and his answering immediately to the last question: 'Oh! the eldest Miss Bennet, beyond a doubt; there cannot be two opinions on that point.'"
 
-"Upon my word!  Well, that is very decided indeed--that does seem as if--but, however, it may all come to nothing, you know." 
+"Upon my word!  Well, that is very decided indeed--that does seem as if--but, however, it may all come to nothing, you know."
 
 "_My_ overhearings were more to the purpose than _yours_, Eliza," said Charlotte.  "Mr. Darcy is not so well worth listening to as his friend, is he?--poor Eliza!--to be only just _tolerable_."
 
@@ -299,13 +297,13 @@ He began to wish to know more of her, and as a step towards conversing with her 
 
 On his approaching them soon afterwards, though without seeming to have any intention of speaking, Miss Lucas defied her friend to mention such a subject to him; which immediately provoking Elizabeth to do it, she turned to him and said:
 
-"Did you not think, Mr. Darcy, that I expressed myself uncommonly well just now, when I was teasing Colonel Forster to give us a ball at Meryton?" 
+"Did you not think, Mr. Darcy, that I expressed myself uncommonly well just now, when I was teasing Colonel Forster to give us a ball at Meryton?"
 
 "With great energy; but it is always a subject which makes a lady energetic."
 
 "You are severe on us."
 
-"It will be _her_ turn soon to be teased," said Miss Lucas.  "I am going to open the instrument, Eliza, and you know what follows." 
+"It will be _her_ turn soon to be teased," said Miss Lucas.  "I am going to open the instrument, Eliza, and you know what follows."
 
 "You are a very strange creature by way of a friend!--always wanting me to play and sing before anybody and everybody! If my vanity had taken a musical turn, you would have been invaluable; but as it is, I would really rather not sit down before those who must be in the habit of hearing the very best performers."  On Miss Lucas's persevering, however, she added, "Very well, if it must be so, it must."  And gravely glancing at Mr. Darcy, "There is a fine old saying, which everybody here is of course familiar with: 'Keep your breath to cool your porridge'; and I shall keep mine to swell my song."
 
@@ -365,7 +363,7 @@ Miss Bingley immediately fixed her eyes on his face, and desired he would tell h
 
 "Miss Elizabeth Bennet."
 
-"Miss Elizabeth Bennet!" repeated Miss Bingley.  "I am all astonishment.  How long has she been such a favourite?--and pray, when am I to wish you joy?" 
+"Miss Elizabeth Bennet!" repeated Miss Bingley.  "I am all astonishment.  How long has she been such a favourite?--and pray, when am I to wish you joy?"
 
 "That is exactly the question which I expected you to ask.  A lady's imagination is very rapid; it jumps from admiration to love, from love to matrimony, in a moment.  I knew you would be wishing me joy."
 
@@ -403,7 +401,7 @@ Catherine was disconcerted, and made no answer; but Lydia, with perfect indiffer
 
 "Mamma," cried Lydia, "my aunt says that Colonel Forster and Captain Carter do not go so often to Miss Watson's as they did when they first came; she sees them now very often standing in Clarke's library."
 
-Mrs. Bennet was prevented replying by the entrance of the footman with a note for Miss Bennet; it came from Netherfield, and the servant waited for an answer.  Mrs. Bennet's eyes sparkled with pleasure, and she was eagerly calling out, while her daughter read, 
+Mrs. Bennet was prevented replying by the entrance of the footman with a note for Miss Bennet; it came from Netherfield, and the servant waited for an answer.  Mrs. Bennet's eyes sparkled with pleasure, and she was eagerly calling out, while her daughter read,
 
 "Well, Jane, who is it from?  What is it about?  What does he say?  Well, Jane, make haste and tell us; make haste, my love."
 
@@ -463,7 +461,7 @@ Elizabeth, feeling really anxious, was determined to go to her, though the carri
 
 "If we make haste," said Lydia, as they walked along, "perhaps we may see something of Captain Carter before he goes."
 
-In Meryton they parted; the two youngest repaired to the lodgings of one of the officers' wives, and Elizabeth continued her walk alone, crossing field after field at a quick pace, jumping over stiles and springing over puddles with impatient activity, and finding herself at last within view of the house, with weary ankles, dirty stockings, and a face glowing with the warmth of exercise. 
+In Meryton they parted; the two youngest repaired to the lodgings of one of the officers' wives, and Elizabeth continued her walk alone, crossing field after field at a quick pace, jumping over stiles and springing over puddles with impatient activity, and finding herself at last within view of the house, with weary ankles, dirty stockings, and a face glowing with the warmth of exercise.
 
 She was shown into the breakfast-parlour, where all but Jane were assembled, and where her appearance created a great deal of surprise.  That she should have walked three miles so early in the day, in such dirty weather, and by herself, was almost incredible to Mrs. Hurst and Miss Bingley; and Elizabeth was convinced that they held her in contempt for it.  She was received, however, very politely by them; and in their brother's manners there was something better than politeness; there was good humour and kindness.  Mr. Darcy said very little, and Mr. Hurst nothing at all.  The former was divided between admiration of the brilliancy which exercise had given to her complexion, and doubt as to the occasion's justifying her coming so far alone.  The latter was thinking only of his breakfast.
 

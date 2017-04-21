@@ -9,13 +9,13 @@ renderBookImage: function(coverImage, title, author) {
     const imageSource = "src/images/" + coverImage
     return (
       <div key={coverImage} className="cluster-landing-book-image-container">
-            <Link to={linkName}>
-                <img className="cluster-landing-book-image" src={imageSource} />
-			</Link>
-            <center>
-                <h2 className="cluster-landing-book-title">{title}</h2>
-                <h3 className="cluster-landing-book-author">{author}</h3>
-            </center>
+        <Link to={linkName}>
+          <img className="cluster-landing-book-image" src={imageSource} />
+		    </Link>
+        <center>
+          <h2 className="cluster-landing-book-title">{title}</h2>
+          <h3 className="cluster-landing-book-author">{author}</h3>
+        </center>
       </div>
     )
   },
