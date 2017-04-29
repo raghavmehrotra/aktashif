@@ -40,7 +40,7 @@ const Book = React.createClass({
 		var allText;
 		//get text from file
 		var rawFile = new XMLHttpRequest()
-		rawFile.open("GET", "src/books/arabicText.docx", false);
+		rawFile.open("GET", "src/books/abc.txt", false);
 		rawFile.onreadystatechange = function () {
 			if(rawFile.readyState === 4) {
 				if(rawFile.status === 200 || rawFile.status == 0) {
