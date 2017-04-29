@@ -40,7 +40,7 @@ const Book = React.createClass({
 		var allText;
 		//get text from file
 		var rawFile = new XMLHttpRequest()
-		rawFile.open("GET", "src/books/abc.txt", false);
+		rawFile.open("GET", "src/books/arabicText.docx", false);
 		rawFile.onreadystatechange = function () {
 			if(rawFile.readyState === 4) {
 				if(rawFile.status === 200 || rawFile.status == 0) {
@@ -99,15 +99,11 @@ const Book = React.createClass({
 					min="1"
 					max={totalPages}
 					value={this.state.currentPage}
-					onChange={this.changePage}
-				 />
-				<select
-					type="select"
-					onChange={this.changePage}
-					label="Bookmarks">
-        <option defaultValue>Bookmarks</option>
-				{this.createSelectItems()}
-				</select>
+					onChange={this.changePage}/>
+					<select type="select" onChange={this.changePage} label="Bookmarks">
+	        	<option defaultValue>Bookmarks</option>
+						{this.createSelectItems()}
+					</select>
 			</center>
 			</div>
 		)},
@@ -150,7 +146,7 @@ const Book = React.createClass({
 		}
 		const pathName = "src/images/" + imageName
 		return(
-			<button onClick={this.getBookmarks}> <img src={pathName}/> </button>
+			<button className="bookmark-button" onClick={this.getBookmarks}> <img src={pathName}/> </button>
 		)
 	},
 
