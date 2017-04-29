@@ -301,11 +301,15 @@ section {
 }
 
 .book-page {
-  	margin-left: 10%;
-  	margin-right: 10%;
-  	max-width: 80%;
-    word-wrap: break-word;
-    white-space: pre-wrap;
+	margin-left: 10%;
+	margin-right: 10%;
+	max-width: 80%;
+  word-wrap: break-word;
+  white-space: pre-wrap;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
 	font-size: 20px;
 }
 
