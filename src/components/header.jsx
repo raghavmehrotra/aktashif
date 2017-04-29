@@ -47,11 +47,12 @@ render: function() {
     return (
 			<div>
       <header className="persistent-header-container">
-            <div className="header-profile-image-container"><Login onLogin={this.getUserId}/> </div>
-            <Link to="/" className="persistent-header-text">
-                <h1>أكتشف</h1>
-            </Link>
-            <div className="header-hub-icon-container">{hubIcon}</div>
+        <div className="header-profile-image-container"><Login onLogin={this.getUserId}/> </div>
+        <Link to="/" className="persistent-header-text">
+            <h1>أكتشف</h1>
+        </Link>
+				<a className="header-link-to-aktashif-org" href="http://aktashif.org" target="_blank">معلومات عنا</a>
+        <div className="header-hub-icon-container">{hubIcon}</div>
       </header>
 			<center dir='rtl' className="profile-welcome"> {greeting} </center>
 				</div>
